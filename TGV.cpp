@@ -7,7 +7,7 @@
 
 #include "TGV.h"
 
-//Add functions defined in TGVClass here (port to different header file later)
+// Functions defined in TGV.cpp here
 
 void TGVClass::init_domain() // Initialize domain correctly for each run.
 {
