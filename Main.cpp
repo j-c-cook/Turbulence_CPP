@@ -14,8 +14,7 @@
 
 // My headers
 #include "Headers.h"
-#include "TGV.h"
-#include "TGV.cpp"
+#include "TGV.cpp" 
 
 int main() { // Start of program
     /**
