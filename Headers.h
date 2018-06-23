@@ -25,8 +25,8 @@ public:
 	double p;
 
 	// Cell neighbors
-	std::shared_ptr< FVCell > xm1;
-	std::shared_ptr< FVCell > xp1;
+	std::shared_ptr< FVCell > xm1; // x minus 1 or left
+	std::shared_ptr< FVCell > xp1;  // x plus 1 or right
 	std::shared_ptr< FVCell > ym1;
 	std::shared_ptr< FVCell > yp1;
 	std::shared_ptr< FVCell > zm1;
@@ -134,53 +134,6 @@ public:
 	};
 
 };
-
-class TGVClass : public :: Global_domain
-{
-public:
-	double Re;
-	std::unordered_map< Map_3D, std::shared_ptr< FVCell >, hasher_key_3D > FVCell_Map;
-
-	// Default constructor
-	TGVClass() :
-		Re( 0.0 )
-	{}
-
-	// Member constructor
-	TGVClass(
-		double const Re_
-	) :
-		Re( Re_ )
-	{}
-
-	// Destructor
-	~TGVClass(){};
-
-	// Member Functions
-	void init_domain();//Initialize this in main.cpp
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #endif
