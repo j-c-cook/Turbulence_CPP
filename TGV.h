@@ -24,6 +24,8 @@ public:
     // Member constructor
     TGVClass(
              double const Re_
+             /* because Re_ is const, calculations will need to be 
+             "constexpr double calculation = x * y"*/
              ) :
     Re( Re_ )
     {}
