@@ -27,6 +27,8 @@ void TGVClass::init_domain() // Initialize domain correctly for each run.
                 thisCell->y_index = j;
                 thisCell->z_index = k;
                 
+                thisCell->u = 10;
+                
                 FVCell_Map[Map_3D(i,j,k)]=thisCell;
             }
         }
@@ -98,4 +100,7 @@ void TGVClass::init_domain() // Initialize domain correctly for each run.
     std::cout<<"Chosen cell: "<<FVCell_Map[Map_3D(0,1,2)]->x_index<<std::endl;
     std::cout<<"Left neighbor x index: "<<FVCell_Map[Map_3D(0,1,2)]->xm1->x_index<<std::endl;
     std::cout<<"Right neighbor x index: "<<FVCell_Map[Map_3D(0,1,2)]->xp1->x_index<<std::endl;
+    
+    // U-Velocity will all be same for 16x16x16
+    std::cout << "U-Velocity value for all cells " << FVCell_Map[Map_3D(1,1,1)]->u << std::endl;
 };
